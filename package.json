@@ -1,0 +1,22 @@
+{
+    "name": "gamble-bot",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "start": "ts-node SpotifyBot.ts",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@types/jest": "^26.0.12",
+        "aws-sdk": "^2.517.0",
+        "axios": "^0.19.2",
+        "discord.js": "^11.5.1",
+        "jest": "^25.1.0",
+        "lodash": "^4.17.15",
+        "ts-jest": "^26.3.0",
+        "typescript": "^4.0.2"
+    }
+}
