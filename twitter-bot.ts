@@ -1,7 +1,7 @@
 import {auth} from "./auth";
 import {ErrorLogger} from "./utils/ErrorLogger";
 import Discord from 'discord.js';
-import {SpotifyBotMessageHandlerDispatcher} from "./SpotifyBotMessageHandlerDispatcher";
+import {TwitterBotMessageHandlerDispatcher} from "./discordMessageHandlers/TwitterBotMessageHandlerDispatcher";
 
 const client = new Discord.Client();
 
@@ -12,12 +12,12 @@ client.on('ready', async () => {
 
 client.on('message', async message => {
     try {
-        new SpotifyBotMessageHandlerDispatcher(message).dispatch();
+        new TwitterBotMessageHandlerDispatcher(message).dispatch();
     } catch (error) {
         ErrorLogger.log(error);
     }
 });
 
-client.login(auth.discordToken).then(r => {
+client.login(auth.discord.token).then(r => {
     console.log("Logged in");
 });
