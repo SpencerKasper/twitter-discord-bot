@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="667b4fc8-a933-45a2-ad7f-88bec28107a4" name="Default Changelist" comment="* Initial commit after forking off of spotify bot.">
-      <change afterPath="$PROJECT_DIR$/static/twitter-bot-commands.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpotifyBot.ts" beforeDir="false" afterPath="$PROJECT_DIR$/twitter-bot.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpotifyBotMessageHandlerDispatcher.ts" beforeDir="false" afterPath="$PROJECT_DIR$/discordMessageHandlers/TwitterBotMessageHandlerDispatcher.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/S3Client.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/SearchResultsSpotifyDataSource.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/discordMessageHandlers/TopSpotifySearchResultDiscordMessageHandler.ts" beforeDir="false" />
+    <list default="true" id="667b4fc8-a933-45a2-ad7f-88bec28107a4" name="Default Changelist" comment="* Clean out the files from anything related to SpotifyBot and set it up for TwitterBot">
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/SpotifyBotCommands.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/SpotifySearchConstants.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/DiscordUser.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/ErrorLogger.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/FileSaveRequest.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +10,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="spencerkasper &lt;spener.kasper@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1lOwtFWCB8Sd6Vx2wndySK63Rvt" />
@@ -53,7 +47,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1607481658499</updated>
-      <workItem from="1607481659842" duration="1429000" />
+      <workItem from="1607481659842" duration="1745000" />
     </task>
     <task id="LOCAL-00001" summary="* Initial commit after forking off of spotify bot.">
       <created>1607481859413</created>
@@ -62,7 +56,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607481859413</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="* Clean out the files from anything related to SpotifyBot and set it up for TwitterBot">
+      <created>1607483125225</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1607483125225</updated>
+    </task>
+    <task id="LOCAL-00003" summary="* Clean out the files from anything related to SpotifyBot and set it up for TwitterBot">
+      <created>1607483216255</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1607483216255</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -81,6 +89,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="* Initial commit after forking off of spotify bot." />
-    <option name="LAST_COMMIT_MESSAGE" value="* Initial commit after forking off of spotify bot." />
+    <MESSAGE value="* Clean out the files from anything related to SpotifyBot and set it up for TwitterBot" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Clean out the files from anything related to SpotifyBot and set it up for TwitterBot" />
   </component>
 </project>
