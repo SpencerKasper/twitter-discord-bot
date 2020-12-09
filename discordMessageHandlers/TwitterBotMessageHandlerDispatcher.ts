@@ -1,5 +1,6 @@
 import {Message} from "discord.js";
 import {COMMANDS} from "../static/twitter-bot-commands";
+import {RetweetAlertDiscordMessageHandler} from "./RetweetAlertDiscordMessageHandler";
 
 export class TwitterBotMessageHandlerDispatcher {
     private readonly message: Message;
@@ -10,9 +11,7 @@ export class TwitterBotMessageHandlerDispatcher {
 
     async dispatch() {
         if (this.messageContainsACommand()) {
-            // new TopTwitterSearchResultDiscordMessageHandler(
-            //     this.message
-            // ).handle();
+            new RetweetAlertDiscordMessageHandler().handle();
         }
     }
 
