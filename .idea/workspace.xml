@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="667b4fc8-a933-45a2-ad7f-88bec28107a4" name="Default Changelist" comment="* I am the author now.">
+    <list default="true" id="667b4fc8-a933-45a2-ad7f-88bec28107a4" name="Default Changelist" comment="* Oops this doesn't exist anymore for now">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/twitter-bot.ts" beforeDir="false" afterPath="$PROJECT_DIR$/twitter-bot.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +19,17 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupnpm">
+      <scroll-view-position x="0" y="0" />
+      <selected-paths>
+        <path>
+          <id value="$PROJECT_DIR$/package.json" />
+          <id value="start" />
+        </path>
+      </selected-paths>
+    </layout>
   </component>
   <component name="ProjectId" id="1lOwtFWCB8Sd6Vx2wndySK63Rvt" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -43,6 +57,23 @@
       <recent name="$PROJECT_DIR$/discordMessageHandlers/RetweetAlertDiscordMessageHandler.ts" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -54,7 +85,7 @@
       <workItem from="1607481659842" duration="2084000" />
       <workItem from="1607485087423" duration="1754000" />
       <workItem from="1607486972804" duration="627000" />
-      <workItem from="1607560395648" duration="766000" />
+      <workItem from="1607560395648" duration="5559000" />
     </task>
     <task id="LOCAL-00001" summary="* Initial commit after forking off of spotify bot.">
       <created>1607481859413</created>
@@ -98,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607560459988</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="* Oops this doesn't exist anymore for now">
+      <created>1607561479835</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1607561479835</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,6 +160,7 @@
     <MESSAGE value="* We do not need aws-sdk" />
     <MESSAGE value="* Add a file with a no op function that conforms to the interface. We can make it do something later" />
     <MESSAGE value="* I am the author now." />
-    <option name="LAST_COMMIT_MESSAGE" value="* I am the author now." />
+    <MESSAGE value="* Oops this doesn't exist anymore for now" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Oops this doesn't exist anymore for now" />
   </component>
 </project>
