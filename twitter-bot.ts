@@ -15,7 +15,6 @@ let twitterClient: TwitterClient;
 discordClient.on('ready', async () => {
     discordChannelForTwitterBot = discordClient.channels.cache
         .find(channel => channel.id === TWITTER_CHANNEL_ID);
-    discordChannelForTwitterBot.send('Twitter bot is online.');
 
     const discordTweetReceivedHandler = new DiscordTweetReceivedHandler(discordChannelForTwitterBot);
     twitterClient = new TwitterClient(discordTweetReceivedHandler);

@@ -6,8 +6,8 @@ const RULES_URL = 'https://api.twitter.com/2/tweets/search/stream/rules'
 const STREAM_URL = 'https://api.twitter.com/2/tweets/search/stream';
 
 const DEFAULT_RULES = [
-    {'value': 'from:mcnuggetman711 is:retweet'},
-    {'value': 'from:7seven7seven777 is:retweet'},
+    {'value': 'from:mcnuggetman711'},
+    {'value': 'from:7seven7seven777'},
 ];
 
 const HEADER = {
@@ -93,10 +93,15 @@ export class TwitterClient {
     };
 
     optionallyThrowErrors = (response) => {
-        const ACCEPTABLE_STATUS_CODES = [200, 201];
-        if (!(response.statusCode in ACCEPTABLE_STATUS_CODES)) {
+        if (this.responseIsNotAcceptable(response)) {
+            console.log(`ERROR: ${response.statusCode}\n${response.message}`)
             throw new Error(response.body);
         }
+    }
+
+    private responseIsNotAcceptable(response) {
+        const ACCEPTABLE_STATUS_CODES = [200, 201];
+        return ACCEPTABLE_STATUS_CODES.filter(code => code === Number(response.statusCode)).length !== 1;
     }
 
     getAllRules = async () => {
