@@ -67,7 +67,6 @@ export class TwitterClient {
             try {
                 const tweet: TweetResponse = JSON.parse(data);
                 this.tweetReceivedHandler.handle(tweet);
-
             } catch (e) {
             }
         }).on('error', error => {
@@ -88,21 +87,24 @@ export class TwitterClient {
             headers: HEADERS_WITH_JSON
         });
 
-        if (response.statusCode !== 201) {
-            throw new Error(response.body);
-        }
+        this.optionallyThrowErrors(response);
 
         return (response.body);
     };
+
+    optionallyThrowErrors = (response) => {
+        const ACCEPTABLE_STATUS_CODES = [200, 201];
+        if (!(response.statusCode in ACCEPTABLE_STATUS_CODES)) {
+            throw new Error(response.body);
+        }
+    }
 
     getAllRules = async () => {
         const response = await needle('get', RULES_URL, {
             headers: HEADER
         })
 
-        if (response.statusCode !== 200) {
-            throw new Error(response.body);
-        }
+        this.optionallyThrowErrors(response);
 
         return (response.body);
     };
@@ -124,9 +126,7 @@ export class TwitterClient {
             headers: HEADERS_WITH_JSON
         })
 
-        if (response.statusCode !== 200) {
-            throw new Error(response.body);
-        }
+        this.optionallyThrowErrors(response);
 
         return (response.body);
     };
