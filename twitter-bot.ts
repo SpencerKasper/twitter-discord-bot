@@ -13,8 +13,8 @@ let discordChannelForTwitterBot;
 let twitterClient;
 
 discordClient.on('ready', async () => {
-    console.log(`Logged in as ${discordClient.user.tag}!`);
-    discordChannelForTwitterBot = discordClient.channels.cache.find(channel => channel.id === TWITTER_CHANNEL_ID);
+    discordChannelForTwitterBot = discordClient.channels.cache
+        .find(channel => channel.id === TWITTER_CHANNEL_ID);
     discordChannelForTwitterBot.send('Twitter bot is online.');
 
     const discordTweetReceivedHandler = new DiscordTweetReceivedHandler(discordChannelForTwitterBot);
@@ -23,5 +23,5 @@ discordClient.on('ready', async () => {
 });
 
 discordClient.login(auth.discord.token).then(r => {
-    console.log("Logged in");
+    console.log(`Logged in as ${discordClient.user.tag}.`);
 });
