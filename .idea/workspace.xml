@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="667b4fc8-a933-45a2-ad7f-88bec28107a4" name="Default Changelist" comment="* Refactor the code into a class and pull apart some of the functions">
+    <list default="true" id="667b4fc8-a933-45a2-ad7f-88bec28107a4" name="Default Changelist" comment="* Remove one unnecessary print statement.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TwitterClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterClient.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/twitter-bot.ts" beforeDir="false" afterPath="$PROJECT_DIR$/twitter-bot.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +94,7 @@
       <workItem from="1607481659842" duration="2084000" />
       <workItem from="1607485087423" duration="1754000" />
       <workItem from="1607486972804" duration="627000" />
-      <workItem from="1607560395648" duration="9096000" />
+      <workItem from="1607560395648" duration="9208000" />
     </task>
     <task id="LOCAL-00001" summary="* Initial commit after forking off of spotify bot.">
       <created>1607481859413</created>
@@ -158,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607574550233</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="* Remove one unnecessary print statement.">
+      <created>1607574683662</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1607574683662</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +193,7 @@
     <MESSAGE value="* Oops this doesn't exist anymore for now" />
     <MESSAGE value="* This is a working sample for sending whenever Kinley or I retweet something." />
     <MESSAGE value="* Refactor the code into a class and pull apart some of the functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Refactor the code into a class and pull apart some of the functions" />
+    <MESSAGE value="* Remove one unnecessary print statement." />
+    <option name="LAST_COMMIT_MESSAGE" value="* Remove one unnecessary print statement." />
   </component>
 </project>

@@ -10,7 +10,7 @@ const TWITTER_CHANNEL_ID = '785957073326178356';
 const discordClient = new Discord.Client();
 let discordChannelForTwitterBot;
 
-let twitterClient;
+let twitterClient: TwitterClient;
 
 discordClient.on('ready', async () => {
     discordChannelForTwitterBot = discordClient.channels.cache
@@ -19,7 +19,7 @@ discordClient.on('ready', async () => {
 
     const discordTweetReceivedHandler = new DiscordTweetReceivedHandler(discordChannelForTwitterBot);
     twitterClient = new TwitterClient(discordTweetReceivedHandler);
-    await twitterClient.init();
+    await twitterClient.initialize();
 });
 
 discordClient.login(auth.discord.token).then(r => {

@@ -34,17 +34,17 @@ export class TwitterClient {
         this.tweetReceivedHandler = tweetReceivedHandler;
     }
 
-    init = async () => {
+    public initialize = async () => {
         try {
             let timeout = 0;
-            this.filteredStream = this.initializeStream();
+            this.filteredStream = this.startStream();
             this.filteredStream.on('timeout', () => {
                 console.warn('A connection error occurred. Reconnecting…');
                 setTimeout(() => {
                     timeout++;
-                    this.initializeStream();
+                    this.startStream();
                 }, 2 ** timeout);
-                this.initializeStream();
+                this.startStream();
             })
             await this.addRules();
         } catch (e) {
@@ -53,7 +53,7 @@ export class TwitterClient {
         }
     }
 
-    initializeStream = () => {
+    startStream = () => {
         console.log('Connecting stream...')
         const options = {
             timeout: 20000
