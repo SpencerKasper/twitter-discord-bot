@@ -1,5 +1,5 @@
 import {auth} from "./auth";
-import Discord, {Channel} from 'discord.js';
+import Discord, {Channel, Message} from 'discord.js';
 import {TwitterBotMessageHandlerDispatcher} from "./discordMessageHandlers/TwitterBotMessageHandlerDispatcher";
 import needle from 'needle';
 import {TwitterClient} from "./TwitterClient";
@@ -19,6 +19,11 @@ discordClient.on('ready', async () => {
     const discordTweetReceivedHandler = new DiscordTweetReceivedHandler(discordChannelForTwitterBot);
     twitterClient = new TwitterClient(discordTweetReceivedHandler);
     await twitterClient.initialize();
+});
+
+discordClient.on('message', async (message: Message) => {
+    await new TwitterBotMessageHandlerDispatcher(message, twitterClient)
+        .dispatch();
 });
 
 discordClient.login(auth.discord.token).then(r => {

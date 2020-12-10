@@ -5,7 +5,7 @@ const TOKEN = auth.twitter.bearerToken;
 const RULES_URL = 'https://api.twitter.com/2/tweets/search/stream/rules'
 const STREAM_URL = 'https://api.twitter.com/2/tweets/search/stream';
 
-const DEFAULT_RULES = [
+const DEFAULT_RULES: TwitterFilterRule[] = [
     {'value': 'from:mcnuggetman711'},
     {'value': 'from:7seven7seven777'},
 ];
@@ -25,8 +25,12 @@ export interface TweetReceivedHandler {
     handle(tweet: TweetResponse): void;
 }
 
+type TwitterFilterRule = {
+    value: string
+};
+
 export class TwitterClient {
-    private currentRules: string[];
+    private currentRules: TwitterFilterRule[] = [];
     private filteredStream;
     private tweetReceivedHandler: TweetReceivedHandler;
 
@@ -53,7 +57,25 @@ export class TwitterClient {
         }
     }
 
-    startStream = () => {
+    public getCurrentRules = () => {
+        return this.currentRules;
+    }
+
+    public addRules = async (rules = DEFAULT_RULES) => {
+        const data = {
+            "add": rules
+        }
+        console.log('Adding rules...')
+        const response = await needle('post', RULES_URL, data, {
+            headers: HEADERS_WITH_JSON
+        });
+
+        this.optionallyThrowErrors(response);
+        this.currentRules = [...this.currentRules, ...rules];
+        return (response.body);
+    };
+
+    private startStream = () => {
         console.log('Connecting stream...')
         const options = {
             timeout: 20000
@@ -78,21 +100,7 @@ export class TwitterClient {
         return stream;
     };
 
-    addRules = async (rules = DEFAULT_RULES) => {
-        const data = {
-            "add": rules
-        }
-        console.log('Adding rules...')
-        const response = await needle('post', RULES_URL, data, {
-            headers: HEADERS_WITH_JSON
-        });
-
-        this.optionallyThrowErrors(response);
-
-        return (response.body);
-    };
-
-    optionallyThrowErrors = (response) => {
+    private optionallyThrowErrors = (response) => {
         if (this.responseIsNotAcceptable(response)) {
             console.log(`ERROR: ${response.statusCode}\n${response.message}`)
             throw new Error(response.body);
@@ -104,7 +112,7 @@ export class TwitterClient {
         return ACCEPTABLE_STATUS_CODES.filter(code => code === Number(response.statusCode)).length !== 1;
     }
 
-    getAllRules = async () => {
+    private getAllRules = async () => {
         const response = await needle('get', RULES_URL, {
             headers: HEADER
         })
@@ -114,7 +122,7 @@ export class TwitterClient {
         return (response.body);
     };
 
-    deleteAllRules = async rules => {
+    private deleteAllRules = async rules => {
         if (!Array.isArray(rules.data)) {
             return null;
         }

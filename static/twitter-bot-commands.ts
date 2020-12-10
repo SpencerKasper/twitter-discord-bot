@@ -5,4 +5,12 @@ type TwitterBotCommand = {
     commandType: string;
 }
 
-export const COMMANDS: TwitterBotCommand[] = [];
+const LIST: TwitterBotCommand = {
+    commandName: 'List',
+    command: '!list',
+    commandType: 'list'
+}
+
+export const COMMANDS: TwitterBotCommand[] = [
+    LIST
+];

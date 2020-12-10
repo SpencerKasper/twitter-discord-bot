@@ -1,17 +1,20 @@
 import {Message} from "discord.js";
 import {COMMANDS} from "../static/twitter-bot-commands";
-import {RetweetAlertDiscordMessageHandler} from "./RetweetAlertDiscordMessageHandler";
+import {ListDiscordMessageHandler} from "./ListDiscordMessageHandler";
+import {TwitterClient} from "../TwitterClient";
 
 export class TwitterBotMessageHandlerDispatcher {
     private readonly message: Message;
+    private listDiscordMessageHandler: ListDiscordMessageHandler;
 
-    constructor(message) {
+    constructor(message, twitterClient: TwitterClient) {
         this.message = message;
+        this.listDiscordMessageHandler = new ListDiscordMessageHandler(this.message, twitterClient);
     }
 
     async dispatch() {
         if (this.messageContainsACommand()) {
-            new RetweetAlertDiscordMessageHandler().handle();
+            this.listDiscordMessageHandler.handle();
         }
     }
 

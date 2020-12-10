@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="667b4fc8-a933-45a2-ad7f-88bec28107a4" name="Default Changelist" comment="* Extract an optionally throw errors function">
+    <list default="true" id="667b4fc8-a933-45a2-ad7f-88bec28107a4" name="Default Changelist" comment="* Oops you definitely can't use in in the way that I attempted to.  I think that just looks at the fields of an object, but I could be wrong.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TwitterClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterClient.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discordMessageHandlers/DiscordMessageHandler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/discordMessageHandlers/DiscordMessageHandler.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discordMessageHandlers/RetweetAlertDiscordMessageHandler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/discordMessageHandlers/ListDiscordMessageHandler.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discordMessageHandlers/TwitterBotMessageHandlerDispatcher.ts" beforeDir="false" afterPath="$PROJECT_DIR$/discordMessageHandlers/TwitterBotMessageHandlerDispatcher.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/twitter-bot-commands.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/twitter-bot-commands.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/twitter-bot.ts" beforeDir="false" afterPath="$PROJECT_DIR$/twitter-bot.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +98,7 @@
       <workItem from="1607481659842" duration="2084000" />
       <workItem from="1607485087423" duration="1754000" />
       <workItem from="1607486972804" duration="627000" />
-      <workItem from="1607560395648" duration="11197000" />
+      <workItem from="1607560395648" duration="12748000" />
     </task>
     <task id="LOCAL-00001" summary="* Initial commit after forking off of spotify bot.">
       <created>1607481859413</created>
@@ -180,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607576445124</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="* Oops you definitely can't use in in the way that I attempted to.  I think that just looks at the fields of an object, but I could be wrong.">
+      <created>1607577194546</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1607577194546</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,6 +221,7 @@
     <MESSAGE value="* Remove one unnecessary print statement." />
     <MESSAGE value="* Just doing a little bit more clean up" />
     <MESSAGE value="* Extract an optionally throw errors function" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Extract an optionally throw errors function" />
+    <MESSAGE value="* Oops you definitely can't use in in the way that I attempted to.  I think that just looks at the fields of an object, but I could be wrong." />
+    <option name="LAST_COMMIT_MESSAGE" value="* Oops you definitely can't use in in the way that I attempted to.  I think that just looks at the fields of an object, but I could be wrong." />
   </component>
 </project>
