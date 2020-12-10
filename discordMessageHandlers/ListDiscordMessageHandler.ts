@@ -12,8 +12,13 @@ export class ListDiscordMessageHandler implements DiscordMessageHandler {
     }
 
     async handle(): Promise<void> {
-        this.twitterClient.getCurrentRules().map(async (rule, index) => {
-            await this.message.channel.send(`Rule ${index + 1}/25: ${rule.value}`);
-        })
+        this.twitterClient
+            .getCurrentRules()
+            .map((rule, index) => this.sendFormattedRuleToChannel(rule, index))
+    }
+
+    private async sendFormattedRuleToChannel(rule, index) {
+        const formattedRule = `Rule ${index + 1} of 25: ${rule.value}`;
+        await this.message.channel.send(formattedRule);
     }
 }
