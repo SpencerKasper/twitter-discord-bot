@@ -1,5 +1,4 @@
 import {auth} from "./auth";
-import {ErrorLogger} from "./utils/ErrorLogger";
 import Discord from 'discord.js';
 import {TwitterBotMessageHandlerDispatcher} from "./discordMessageHandlers/TwitterBotMessageHandlerDispatcher";
 
@@ -14,7 +13,6 @@ client.on('message', async message => {
     try {
         await new TwitterBotMessageHandlerDispatcher(message).dispatch();
     } catch (error) {
-        ErrorLogger.log(error);
     }
 });
 

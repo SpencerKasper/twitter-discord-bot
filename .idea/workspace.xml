@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="667b4fc8-a933-45a2-ad7f-88bec28107a4" name="Default Changelist" comment="* Add the shell for the code that will handle the message that matched the command">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="667b4fc8-a933-45a2-ad7f-88bec28107a4" name="Default Changelist" comment="* I am the author now.">
       <change beforePath="$PROJECT_DIR$/twitter-bot.ts" beforeDir="false" afterPath="$PROJECT_DIR$/twitter-bot.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,6 +54,7 @@
       <workItem from="1607481659842" duration="2084000" />
       <workItem from="1607485087423" duration="1754000" />
       <workItem from="1607486972804" duration="627000" />
+      <workItem from="1607560395648" duration="766000" />
     </task>
     <task id="LOCAL-00001" summary="* Initial commit after forking off of spotify bot.">
       <created>1607481859413</created>
@@ -91,7 +91,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607487012655</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="* I am the author now.">
+      <created>1607560459988</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1607560459988</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +121,7 @@
     <MESSAGE value="* Clean out the files from anything related to SpotifyBot and set it up for TwitterBot" />
     <MESSAGE value="* We do not need aws-sdk" />
     <MESSAGE value="* Add a file with a no op function that conforms to the interface. We can make it do something later" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Add a file with a no op function that conforms to the interface. We can make it do something later" />
+    <MESSAGE value="* I am the author now." />
+    <option name="LAST_COMMIT_MESSAGE" value="* I am the author now." />
   </component>
 </project>
