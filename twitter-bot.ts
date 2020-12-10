@@ -12,7 +12,7 @@ client.on('ready', async () => {
 
 client.on('message', async message => {
     try {
-        new TwitterBotMessageHandlerDispatcher(message).dispatch();
+        await new TwitterBotMessageHandlerDispatcher(message).dispatch();
     } catch (error) {
         ErrorLogger.log(error);
     }
