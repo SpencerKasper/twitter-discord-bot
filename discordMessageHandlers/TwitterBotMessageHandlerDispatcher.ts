@@ -12,7 +12,7 @@ export class TwitterBotMessageHandlerDispatcher {
     private readonly message: Message;
     private discordMessageParser: DiscordMessageParser;
     private twitterClient: TwitterClient;
-    private discordUser: DiscordUser;
+    private readonly discordUser: DiscordUser;
 
     constructor(message, twitterClient: TwitterClient) {
         this.message = message;

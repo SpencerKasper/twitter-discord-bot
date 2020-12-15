@@ -2,9 +2,10 @@ import {Message} from "discord.js";
 import {TwitterClient} from "../TwitterClient";
 import {PhraseAfterIdentifierMessageParser} from "../messageParsers/PhraseAfterIdentifierMessageParser";
 import {DiscordMessageHandler} from "./DiscordMessageHandler";
-import {ADD_TWITTER_FILTER_COMMAND, LIST_COMMAND} from "../static/twitter-bot-commands";
+import {ADD_TWITTER_FILTER_COMMAND, DELETE_TWITTER_FILTER_COMMAND, LIST_COMMAND} from "../static/twitter-bot-commands";
 import {ListDiscordMessageHandler} from "./ListDiscordMessageHandler";
 import {AddTwitterFilterDiscordMessageHandler} from "./AddTwitterFilterDiscordMessageHandler";
+import {DeleteTwitterFilterDiscordMessageHandler} from "./DeleteTwitterFilterDiscordMessageHandler";
 
 export class DiscordMessageHandlerFactory {
     private readonly message: Message;
@@ -23,6 +24,8 @@ export class DiscordMessageHandlerFactory {
                 return new ListDiscordMessageHandler(this.message, this.twitterClient, LIST_COMMAND);
             case(ADD_TWITTER_FILTER_COMMAND.command):
                 return new AddTwitterFilterDiscordMessageHandler(this.message, this.twitterClient, ADD_TWITTER_FILTER_COMMAND);
+            case(DELETE_TWITTER_FILTER_COMMAND.command):
+                return new DeleteTwitterFilterDiscordMessageHandler(this.message, this.twitterClient, DELETE_TWITTER_FILTER_COMMAND);
         }
     }
 }

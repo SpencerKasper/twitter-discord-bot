@@ -50,10 +50,7 @@ export class TwitterClient {
                 }, 2 ** timeout);
                 await this.startStream();
             })
-            const existingRules = await this.getCurrentRules();
-            if (existingRules.length > 0) {
-                await this.deleteAllRules(existingRules);
-            }
+            await this.deleteAllRules();
             await this.addRules();
         } catch (e) {
             console.error(e);
@@ -121,12 +118,10 @@ export class TwitterClient {
         return (response.body.data);
     };
 
-    private deleteAllRules = async rules => {
-        const ids = rules.map(rule => rule.id);
-
+    public deleteRulesById = async ruleIds => {
         const data = {
-            "delete": {
-                "ids": ids
+            delete: {
+                ids: ruleIds
             }
         }
 
@@ -135,7 +130,16 @@ export class TwitterClient {
         })
 
         this.optionallyThrowErrors(response);
-        console.log(response.body);
-        return (response.body);
+
+        return (response.body.meta.summary);
     };
+
+    private deleteAllRules = async () => {
+        const existingRules = await this.getCurrentRules();
+
+        if (existingRules.length > 0) {
+            const ids = existingRules.map(rule => rule.id);
+            await this.deleteRulesById(ids);
+        }
+    }
 }

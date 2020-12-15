@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="667b4fc8-a933-45a2-ad7f-88bec28107a4" name="Default Changelist" comment="* Send as one message instead of one message per rule in the list command">
+      <change afterPath="$PROJECT_DIR$/discordMessageHandlers/DeleteTwitterFilterDiscordMessageHandler.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discordMessageHandlers/AddTwitterFilterDiscordMessageHandler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/discordMessageHandlers/AddTwitterFilterDiscordMessageHandler.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discordMessageHandlers/ListDiscordMessageHandler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/discordMessageHandlers/ListDiscordMessageHandler.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/FileReaderAndWriter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/FileReaderAndWriter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TwitterClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterClient.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discordMessageHandlers/DiscordMessageHandlerFactory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/discordMessageHandlers/DiscordMessageHandlerFactory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discordMessageHandlers/TwitterBotMessageHandlerDispatcher.ts" beforeDir="false" afterPath="$PROJECT_DIR$/discordMessageHandlers/TwitterBotMessageHandlerDispatcher.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/twitter-bot-commands.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/twitter-bot-commands.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +71,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="es6.move.members.recent.items">
+      <recent name="$PROJECT_DIR$/discordMessageHandlers/DeleteTwitterFilterDiscordMessageHandler.ts" />
       <recent name="$PROJECT_DIR$/discordMessageHandlers/AddTwitterFilterDiscordMessageHandler.ts" />
       <recent name="$PROJECT_DIR$/discordMessageHandlers/DiscordMessageHandlerFactory.ts" />
       <recent name="$PROJECT_DIR$/discordMessageHandlers/RetweetAlertDiscordMessageHandler.ts" />
@@ -105,7 +108,7 @@
       <workItem from="1607560395648" duration="14009000" />
       <workItem from="1607621453537" duration="4536000" />
       <workItem from="1607995451392" duration="756000" />
-      <workItem from="1607998482620" duration="10910000" />
+      <workItem from="1607998482620" duration="12051000" />
     </task>
     <task id="LOCAL-00001" summary="* Initial commit after forking off of spotify bot.">
       <created>1607481859413</created>
@@ -240,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608008814624</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="* Send as one message instead of one message per rule in the list command">
+      <created>1608009419478</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1608009419478</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

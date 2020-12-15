@@ -20,7 +20,15 @@ export const ADD_TWITTER_FILTER_COMMAND: TwitterBotCommand = {
     sampleCall: '!add-filter from:7seven7seven777'
 }
 
+export const DELETE_TWITTER_FILTER_COMMAND: TwitterBotCommand = {
+    commandName: 'Delete Twitter Filter',
+    command: '!delete-filter',
+    privilegeLevel: 'admin',
+    sampleCall: '!delete-filter 12345678910'
+}
+
 export const COMMANDS: TwitterBotCommand[] = [
     LIST_COMMAND,
-    ADD_TWITTER_FILTER_COMMAND
+    ADD_TWITTER_FILTER_COMMAND,
+    DELETE_TWITTER_FILTER_COMMAND
 ];
