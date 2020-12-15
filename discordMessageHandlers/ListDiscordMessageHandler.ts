@@ -17,10 +17,14 @@ export class ListDiscordMessageHandler implements DiscordMessageHandler {
     async handle(): Promise<void> {
         const currentRules = await this.twitterClient
             .getCurrentRules();
-        const formattedRule = currentRules
-            .map((rule) => ListDiscordMessageHandler.formatRule(rule))
-            .join('\n');
-        await this.message.channel.send(formattedRule);
+        if (currentRules) {
+            const formattedRule = currentRules
+                .map((rule) => ListDiscordMessageHandler.formatRule(rule))
+                .join('\n');
+            await this.message.channel.send(formattedRule);
+        } else {
+            await this.message.channel.send('There are currently no filter rules in effect.');
+        }
     }
 
     private static formatRule(rule) {

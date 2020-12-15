@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="667b4fc8-a933-45a2-ad7f-88bec28107a4" name="Default Changelist" comment="* Send as one message instead of one message per rule in the list command">
-      <change afterPath="$PROJECT_DIR$/discordMessageHandlers/DeleteTwitterFilterDiscordMessageHandler.ts" afterDir="false" />
+    <list default="true" id="667b4fc8-a933-45a2-ad7f-88bec28107a4" name="Default Changelist" comment="* Remove default rules so we start clean">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TwitterClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterClient.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discordMessageHandlers/DiscordMessageHandlerFactory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/discordMessageHandlers/DiscordMessageHandlerFactory.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discordMessageHandlers/TwitterBotMessageHandlerDispatcher.ts" beforeDir="false" afterPath="$PROJECT_DIR$/discordMessageHandlers/TwitterBotMessageHandlerDispatcher.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/twitter-bot-commands.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/twitter-bot-commands.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discordMessageHandlers/ListDiscordMessageHandler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/discordMessageHandlers/ListDiscordMessageHandler.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +104,7 @@
       <workItem from="1607560395648" duration="14009000" />
       <workItem from="1607621453537" duration="4536000" />
       <workItem from="1607995451392" duration="756000" />
-      <workItem from="1607998482620" duration="12051000" />
+      <workItem from="1607998482620" duration="12948000" />
     </task>
     <task id="LOCAL-00001" summary="* Initial commit after forking off of spotify bot.">
       <created>1607481859413</created>
@@ -250,7 +246,21 @@
       <option name="project" value="LOCAL" />
       <updated>1608009419478</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="* Add a delete rule command that is also privileged.">
+      <created>1608010692342</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1608010692343</updated>
+    </task>
+    <task id="LOCAL-00022" summary="* Remove default rules so we start clean">
+      <created>1608011407403</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1608011407403</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,6 +298,8 @@
     <MESSAGE value="* Added some permissioning for adding filters" />
     <MESSAGE value="* Fix the delete rules function in the TwitterClient" />
     <MESSAGE value="* Send as one message instead of one message per rule in the list command" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Send as one message instead of one message per rule in the list command" />
+    <MESSAGE value="* Add a delete rule command that is also privileged." />
+    <MESSAGE value="* Remove default rules so we start clean" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Remove default rules so we start clean" />
   </component>
 </project>
