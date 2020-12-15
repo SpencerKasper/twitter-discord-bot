@@ -122,11 +122,7 @@ export class TwitterClient {
     };
 
     private deleteAllRules = async rules => {
-        if (!Array.isArray(rules.data)) {
-            return null;
-        }
-
-        const ids = rules.data.map(rule => rule.id);
+        const ids = rules.map(rule => rule.id);
 
         const data = {
             "delete": {
