@@ -5,12 +5,6 @@ const TOKEN = auth.twitter.bearerToken;
 const RULES_URL = 'https://api.twitter.com/2/tweets/search/stream/rules'
 const STREAM_URL = 'https://api.twitter.com/2/tweets/search/stream';
 
-const DEFAULT_RULES: TwitterFilterRule[] = [
-    {'value': 'from:mcnuggetman711'},
-    {'value': 'from:thecupkatie'},
-    {'value': 'from:amazinganthony7'},
-];
-
 const HEADER = {
     "authorization": `Bearer ${TOKEN}`
 };
@@ -51,14 +45,13 @@ export class TwitterClient {
                 await this.startStream();
             })
             await this.deleteAllRules();
-            await this.addRules();
         } catch (e) {
             console.error(e);
             process.exit(-1);
         }
     }
 
-    public addRules = async (rules = DEFAULT_RULES) => {
+    public addRules = async (rules: TwitterFilterRule[]) => {
         const data = {
             "add": rules
         }
