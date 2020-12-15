@@ -19,7 +19,11 @@ export class TwitterBotMessageHandlerDispatcher {
 
     async dispatch() {
         if (this.messageContainsACommand()) {
-            const discordMessageHandler = await new DiscordMessageHandlerFactory(this.message, this.twitterClient).create();
+            const discordMessageHandler = await new DiscordMessageHandlerFactory(
+                this.message,
+                this.twitterClient
+            ).create();
+
             await discordMessageHandler.handle();
         }
     }

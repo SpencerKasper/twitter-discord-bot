@@ -7,7 +7,6 @@ const STREAM_URL = 'https://api.twitter.com/2/tweets/search/stream';
 
 const DEFAULT_RULES: TwitterFilterRule[] = [
     {'value': 'from:mcnuggetman711'},
-    {'value': 'from:7seven7seven777'},
     {'value': 'from:thecupkatie'},
     {'value': 'from:amazinganthony7'},
 ];
@@ -32,7 +31,6 @@ type TwitterFilterRule = {
 };
 
 export class TwitterClient {
-    private currentRules: TwitterFilterRule[] = [];
     private filteredStream;
     private tweetReceivedHandler: TweetReceivedHandler;
 
@@ -43,24 +41,24 @@ export class TwitterClient {
     public initialize = async () => {
         try {
             let timeout = 0;
-            this.filteredStream = this.startStream();
-            this.filteredStream.on('timeout', () => {
+            this.filteredStream = await this.startStream();
+            this.filteredStream.on('timeout', async () => {
                 console.warn('A connection error occurred. Reconnecting…');
-                setTimeout(() => {
+                setTimeout(async () => {
                     timeout++;
-                    this.startStream();
+                    await this.startStream();
                 }, 2 ** timeout);
-                this.startStream();
+                await this.startStream();
             })
+            const existingRules = await this.getCurrentRules();
+            if (existingRules.length > 0) {
+                await this.deleteAllRules(existingRules);
+            }
             await this.addRules();
         } catch (e) {
             console.error(e);
             process.exit(-1);
         }
-    }
-
-    public getCurrentRules = () => {
-        return this.currentRules;
     }
 
     public addRules = async (rules = DEFAULT_RULES) => {
@@ -73,17 +71,16 @@ export class TwitterClient {
         });
 
         this.optionallyThrowErrors(response);
-        this.currentRules = [...this.currentRules, ...rules];
         return (response.body);
     };
 
-    private startStream = () => {
+    private startStream = async () => {
         console.log('Connecting stream...')
         const options = {
             timeout: 20000
         }
 
-        const stream = needle.get(STREAM_URL, {
+        const stream = await needle.get(STREAM_URL, {
             headers: HEADER
         }, options);
 
@@ -114,14 +111,14 @@ export class TwitterClient {
         return ACCEPTABLE_STATUS_CODES.filter(code => code === Number(response.statusCode)).length !== 1;
     }
 
-    private getAllRules = async () => {
+    public getCurrentRules = async () => {
         const response = await needle('get', RULES_URL, {
             headers: HEADER
         })
 
         this.optionallyThrowErrors(response);
 
-        return (response.body);
+        return (response.body.data);
     };
 
     private deleteAllRules = async rules => {
@@ -142,7 +139,7 @@ export class TwitterClient {
         })
 
         this.optionallyThrowErrors(response);
-
+        console.log(response.body);
         return (response.body);
     };
 }

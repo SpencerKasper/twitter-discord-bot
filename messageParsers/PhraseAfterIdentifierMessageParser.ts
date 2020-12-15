@@ -4,19 +4,21 @@ import {Message} from "discord.js";
 export class PhraseAfterIdentifierMessageParser implements DiscordMessageParser {
     message: Message;
     private readonly command: string;
+    private readonly arguments: string[];
 
     constructor(message: Message) {
         this.message = message;
-        this.command = this.message.content.split(' ')[0];
-    }
-
-    parse = (): string => {
         const allOfTheWordsWithIdentifierFirst: string[] = this.message.content.split(' ');
+        this.command = allOfTheWordsWithIdentifierFirst[0];
         allOfTheWordsWithIdentifierFirst.shift();
-        return allOfTheWordsWithIdentifierFirst.join(' ');
+        this.arguments = allOfTheWordsWithIdentifierFirst;
     }
 
     getCommand = (): string => {
         return this.command;
+    }
+
+    getArguments = (): string[] => {
+        return this.arguments;
     }
 }
