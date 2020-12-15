@@ -1,7 +1,6 @@
 import {auth} from "./auth";
-import Discord, {Channel, Message} from 'discord.js';
+import Discord, {Message} from 'discord.js';
 import {TwitterBotMessageHandlerDispatcher} from "./discordMessageHandlers/TwitterBotMessageHandlerDispatcher";
-import needle from 'needle';
 import {TwitterClient} from "./TwitterClient";
 import {DiscordTweetReceivedHandler} from "./DiscordTweetReceivedHandler";
 

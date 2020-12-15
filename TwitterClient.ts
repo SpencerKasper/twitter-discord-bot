@@ -8,6 +8,8 @@ const STREAM_URL = 'https://api.twitter.com/2/tweets/search/stream';
 const DEFAULT_RULES: TwitterFilterRule[] = [
     {'value': 'from:mcnuggetman711'},
     {'value': 'from:7seven7seven777'},
+    {'value': 'from:thecupkatie'},
+    {'value': 'from:amazinganthony7'},
 ];
 
 const HEADER = {
