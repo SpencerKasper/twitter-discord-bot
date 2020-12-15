@@ -130,7 +130,7 @@ export class TwitterClient {
     private deleteAllRules = async () => {
         const existingRules = await this.getCurrentRules();
 
-        if (existingRules.length > 0) {
+        if (existingRules && existingRules.length > 0) {
             const ids = existingRules.map(rule => rule.id);
             await this.deleteRulesById(ids);
         }
