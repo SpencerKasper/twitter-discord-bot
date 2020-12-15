@@ -17,12 +17,13 @@ export class ListDiscordMessageHandler implements DiscordMessageHandler {
     async handle(): Promise<void> {
         const currentRules = await this.twitterClient
             .getCurrentRules();
-        currentRules
-            .map((rule) => this.sendFormattedRuleToChannel(rule))
+        const formattedRule = currentRules
+            .map((rule) => ListDiscordMessageHandler.formatRule(rule))
+            .join('\n');
+        await this.message.channel.send(formattedRule);
     }
 
-    private async sendFormattedRuleToChannel(rule) {
-        const formattedRule = `${rule.id} - ${rule.value}`;
-        await this.message.channel.send(formattedRule);
+    private static formatRule(rule) {
+        return `${rule.id} - ${rule.value}`;
     }
 }

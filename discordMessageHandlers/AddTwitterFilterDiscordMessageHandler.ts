@@ -29,13 +29,14 @@ export class AddTwitterFilterDiscordMessageHandler implements DiscordMessageHand
 
         const currentRules = await this.twitterClient.getCurrentRules();
         await this.message.channel.send('Successfully added rule. Here is a list of the current rules in effect:')
-        currentRules
-            .map((rule) => this.sendFormattedRuleToChannel(rule))
+        const formattedRules = currentRules
+            .map((rule) => this.formatRule(rule))
+            .join('\n');
+        await this.message.channel.send(formattedRules);
     }
 
-    private async sendFormattedRuleToChannel(rule) {
-        const formattedRule = `${rule.id} - ${rule.value}`;
-        await this.message.channel.send(formattedRule);
+    private formatRule(rule) {
+        return `${rule.id} - ${rule.value}`;
     }
 
 }
