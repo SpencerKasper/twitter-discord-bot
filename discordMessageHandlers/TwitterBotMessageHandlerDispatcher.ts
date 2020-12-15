@@ -5,14 +5,18 @@ import {TwitterClient} from "../TwitterClient";
 import {DiscordMessageParser} from "../messageParsers/DiscordMessageParser";
 import {PhraseAfterIdentifierMessageParser} from "../messageParsers/PhraseAfterIdentifierMessageParser";
 import {DiscordMessageHandlerFactory} from "./DiscordMessageHandlerFactory";
+import {DiscordUser} from "../utils/DiscordUser";
+import {Privileges} from "../utils/Privileges";
 
 export class TwitterBotMessageHandlerDispatcher {
     private readonly message: Message;
     private discordMessageParser: DiscordMessageParser;
     private twitterClient: TwitterClient;
+    private discordUser: DiscordUser;
 
     constructor(message, twitterClient: TwitterClient) {
         this.message = message;
+        this.discordUser = new DiscordUser(this.message);
         this.discordMessageParser = new PhraseAfterIdentifierMessageParser(this.message);
         this.twitterClient = twitterClient;
     }
@@ -24,7 +28,11 @@ export class TwitterBotMessageHandlerDispatcher {
                 this.twitterClient
             ).create();
 
-            await discordMessageHandler.handle();
+            if (Privileges.userIsPermissionedForCommand(discordMessageHandler.command, this.discordUser)) {
+                await discordMessageHandler.handle();
+            } else {
+                await this.message.channel.send('You do not have permission to run this command.');
+            }
         }
     }
 

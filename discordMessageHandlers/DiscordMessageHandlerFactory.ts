@@ -20,9 +20,9 @@ export class DiscordMessageHandlerFactory {
     create(): DiscordMessageHandler {
         switch (this.discordMessageParser.getCommand()) {
             case(LIST_COMMAND.command):
-                return new ListDiscordMessageHandler(this.message, this.twitterClient);
+                return new ListDiscordMessageHandler(this.message, this.twitterClient, LIST_COMMAND);
             case(ADD_TWITTER_FILTER_COMMAND.command):
-                return new AddTwitterFilterDiscordMessageHandler(this.message, this.twitterClient);
+                return new AddTwitterFilterDiscordMessageHandler(this.message, this.twitterClient, ADD_TWITTER_FILTER_COMMAND);
         }
     }
 }

@@ -1,13 +1,16 @@
 import {DiscordMessageHandler} from "./DiscordMessageHandler";
 import {Message} from "discord.js";
 import {TwitterClient} from "../TwitterClient";
+import {TwitterBotCommand} from "../static/twitter-bot-commands";
 
 export class ListDiscordMessageHandler implements DiscordMessageHandler {
     message: Message;
+    command: TwitterBotCommand;
     private twitterClient: TwitterClient;
 
-    constructor(message: Message, twitterClient: TwitterClient) {
+    constructor(message: Message, twitterClient: TwitterClient, command: TwitterBotCommand) {
         this.message = message;
+        this.command = command;
         this.twitterClient = twitterClient;
     }
 
@@ -15,7 +18,7 @@ export class ListDiscordMessageHandler implements DiscordMessageHandler {
         const currentRules = await this.twitterClient
             .getCurrentRules();
         currentRules
-            .map((rule, index) => this.sendFormattedRuleToChannel(rule))
+            .map((rule) => this.sendFormattedRuleToChannel(rule))
     }
 
     private async sendFormattedRuleToChannel(rule) {

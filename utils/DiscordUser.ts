@@ -1,18 +1,18 @@
+import {Client, Message} from "discord.js";
+import {FileReaderAndWriter} from "./FileReaderAndWriter";
+
 export class DiscordUser {
-    static getUsername(msg, client) {
-        const user = msg.member.toString();
-        let userSearchCode;
+    private message: Message;
+    private discordClient: Client;
+    private readonly userName: string;
 
-        if (user.includes("!")) {
-            userSearchCode = this.extractUserSearchCode(user, '!');
-        } else {
-            userSearchCode = this.extractUserSearchCode(user, '@');
-        }
-
-        return client.users.get(userSearchCode).username;
+    constructor(message: Message) {
+        this.message = message;
+        this.discordClient = message.client;
+        this.userName = message.member.user.username;
     }
 
-    private static extractUserSearchCode(user: string, separator) {
-        return user.split(separator)[1].split(">")[0];
+    public getUserName() {
+        return this.userName.toLowerCase();
     }
 }

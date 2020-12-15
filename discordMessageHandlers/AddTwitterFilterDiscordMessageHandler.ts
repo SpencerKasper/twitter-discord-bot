@@ -2,14 +2,17 @@ import {DiscordMessageHandler} from "./DiscordMessageHandler";
 import {Message} from "discord.js";
 import {TwitterClient} from "../TwitterClient";
 import {PhraseAfterIdentifierMessageParser} from "../messageParsers/PhraseAfterIdentifierMessageParser";
+import {TwitterBotCommand} from "../static/twitter-bot-commands";
 
 export class AddTwitterFilterDiscordMessageHandler implements DiscordMessageHandler {
-    private twitterClient: TwitterClient;
     message: Message;
+    command: TwitterBotCommand;
+    private twitterClient: TwitterClient;
     private discordMessageParser: PhraseAfterIdentifierMessageParser;
 
-    constructor(message: Message, twitterClient: TwitterClient) {
+    constructor(message: Message, twitterClient: TwitterClient, twitterBotCommand: TwitterBotCommand) {
         this.message = message;
+        this.command = twitterBotCommand;
         this.twitterClient = twitterClient;
         this.discordMessageParser = new PhraseAfterIdentifierMessageParser(this.message);
     }

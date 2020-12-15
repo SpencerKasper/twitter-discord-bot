@@ -18,11 +18,12 @@ export class FileReaderAndWriter {
     }
 
     static readFile(filePath) {
-        filePath = __dirname + filePath;
+        const fullFilePath = __dirname + filePath;
+        console.log(`filePath: ${fullFilePath}`)
         try {
-            return JSON.parse(fs.readFileSync(filePath, { encoding: 'utf-8' }));
+            return JSON.parse(fs.readFileSync(fullFilePath, { encoding: 'utf-8' }));
         } catch (err) {
-            console.log(err.message);
+            console.log('Could not read file.');
             return null;
         }
     }

@@ -1,20 +1,22 @@
-interface TwitterBotCommand {
+import {PrivilegeLevels} from "../utils/Privileges";
+
+export interface TwitterBotCommand {
     commandName: string;
     command: string;
+    privilegeLevel: PrivilegeLevels;
     sampleCall?: string;
-    commandType: string;
 }
 
 export const LIST_COMMAND: TwitterBotCommand = {
     commandName: 'List',
     command: '!list',
-    commandType: 'list'
+    privilegeLevel: 'public'
 }
 
 export const ADD_TWITTER_FILTER_COMMAND: TwitterBotCommand = {
     commandName: 'Add Twitter Filter',
     command: '!add-filter',
-    commandType: 'add',
+    privilegeLevel: 'admin',
     sampleCall: '!add-filter from:7seven7seven777'
 }
 
