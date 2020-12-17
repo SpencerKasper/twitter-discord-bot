@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="667b4fc8-a933-45a2-ad7f-88bec28107a4" name="Default Changelist" comment="* Switch twitter bot over to the main channel">
-      <change afterPath="$PROJECT_DIR$/discordMessageHandlers/ChangePermissionDiscordMessageHandler.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prod.ts" afterDir="false" />
+    <list default="true" id="667b4fc8-a933-45a2-ad7f-88bec28107a4" name="Default Changelist" comment="* Add a command that requires privileged permissions">
+      <change afterPath="$PROJECT_DIR$/discordMessageHandlers/ListUsersDiscordMessageHandler.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/discordMessageHandlers/DiscordMessageHandlerFactory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/discordMessageHandlers/DiscordMessageHandlerFactory.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/twitter-bot-commands.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/twitter-bot-commands.ts" afterDir="false" />
@@ -70,11 +70,11 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="es6.move.members.recent.items">
+      <recent name="$PROJECT_DIR$/discordMessageHandlers/ListUsersDiscordMessageHandler.ts" />
       <recent name="$PROJECT_DIR$/discordMessageHandlers/ChangePermissionDiscordMessageHandler.ts" />
       <recent name="$PROJECT_DIR$/discordMessageHandlers/HelpCommandDiscordMessageHandler.ts" />
       <recent name="$PROJECT_DIR$/discordMessageHandlers/DeleteTwitterFilterDiscordMessageHandler.ts" />
       <recent name="$PROJECT_DIR$/discordMessageHandlers/AddTwitterFilterDiscordMessageHandler.ts" />
-      <recent name="$PROJECT_DIR$/discordMessageHandlers/DiscordMessageHandlerFactory.ts" />
     </key>
   </component>
   <component name="RunManager">
@@ -109,7 +109,7 @@
       <workItem from="1607621453537" duration="4536000" />
       <workItem from="1607995451392" duration="756000" />
       <workItem from="1607998482620" duration="14384000" />
-      <workItem from="1608061135161" duration="8336000" />
+      <workItem from="1608061135161" duration="9266000" />
     </task>
     <task id="LOCAL-00001" summary="* Initial commit after forking off of spotify bot.">
       <created>1607481859413</created>
@@ -286,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608176132484</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="* Add a command that requires privileged permissions">
+      <created>1608181068298</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1608181068298</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,6 +336,7 @@
     <MESSAGE value="* Handle !list if there are no rules in effect" />
     <MESSAGE value="* Add a help command to print out instructions on the commands available" />
     <MESSAGE value="* Switch twitter bot over to the main channel" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Switch twitter bot over to the main channel" />
+    <MESSAGE value="* Add a command that requires privileged permissions" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Add a command that requires privileged permissions" />
   </component>
 </project>

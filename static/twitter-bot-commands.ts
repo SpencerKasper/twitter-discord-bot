@@ -9,11 +9,19 @@ export interface TwitterBotCommand {
     references?: string[];
 }
 
-export const LIST_COMMAND: TwitterBotCommand = {
-    commandName: 'List',
-    command: '!list',
-    privilegeLevel: 'public'
-}
+export const LIST_FILTERS_COMMAND: TwitterBotCommand = {
+    commandName: 'List Filters',
+    command: '!list-filters',
+    privilegeLevel: 'public',
+    sampleCall: '!list-filters'
+};
+
+export const LIST_USERS_COMMAND: TwitterBotCommand = {
+    commandName: 'List Users',
+    command: '!list-users',
+    privilegeLevel: 'public',
+    sampleCall: '!list-users'
+};
 
 export const ADD_TWITTER_FILTER_COMMAND: TwitterBotCommand = {
     commandName: 'Add Twitter Filter',
@@ -48,7 +56,8 @@ export const HELP_COMMAND: TwitterBotCommand = {
 }
 
 export const COMMANDS: TwitterBotCommand[] = [
-    LIST_COMMAND,
+    LIST_FILTERS_COMMAND,
+    LIST_USERS_COMMAND,
     ADD_TWITTER_FILTER_COMMAND,
     DELETE_TWITTER_FILTER_COMMAND,
     CHANGE_PERMISSIONS_COMMAND,
