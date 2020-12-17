@@ -33,6 +33,14 @@ export const DELETE_TWITTER_FILTER_COMMAND: TwitterBotCommand = {
     sampleCall: '!delete-filter 12345678910'
 }
 
+export const CHANGE_PERMISSIONS_COMMAND: TwitterBotCommand = {
+    commandName: 'Change Permissions',
+    command: '!chprm',
+    privilegeLevel: 'admin',
+    sampleCall: '!chprm poshprincess7 admin',
+    description: 'Allows you to change the permissions for a user.  The first argument is the user and the second is the privilege level'
+}
+
 export const HELP_COMMAND: TwitterBotCommand = {
     commandName: 'Help',
     command: '!help',
@@ -43,5 +51,6 @@ export const COMMANDS: TwitterBotCommand[] = [
     LIST_COMMAND,
     ADD_TWITTER_FILTER_COMMAND,
     DELETE_TWITTER_FILTER_COMMAND,
+    CHANGE_PERMISSIONS_COMMAND,
     HELP_COMMAND
 ];

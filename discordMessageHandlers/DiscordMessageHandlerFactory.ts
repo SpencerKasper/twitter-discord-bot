@@ -4,6 +4,7 @@ import {PhraseAfterIdentifierMessageParser} from "../messageParsers/PhraseAfterI
 import {DiscordMessageHandler} from "./DiscordMessageHandler";
 import {
     ADD_TWITTER_FILTER_COMMAND,
+    CHANGE_PERMISSIONS_COMMAND,
     DELETE_TWITTER_FILTER_COMMAND,
     HELP_COMMAND,
     LIST_COMMAND
@@ -12,6 +13,7 @@ import {ListDiscordMessageHandler} from "./ListDiscordMessageHandler";
 import {AddTwitterFilterDiscordMessageHandler} from "./AddTwitterFilterDiscordMessageHandler";
 import {DeleteTwitterFilterDiscordMessageHandler} from "./DeleteTwitterFilterDiscordMessageHandler";
 import {HelpCommandDiscordMessageHandler} from "./HelpCommandDiscordMessageHandler";
+import {ChangePermissionsDiscordMessageHandler} from "./ChangePermissionDiscordMessageHandler";
 
 export class DiscordMessageHandlerFactory {
     private readonly message: Message;
@@ -32,6 +34,8 @@ export class DiscordMessageHandlerFactory {
                 return new AddTwitterFilterDiscordMessageHandler(this.message, this.twitterClient, ADD_TWITTER_FILTER_COMMAND);
             case(DELETE_TWITTER_FILTER_COMMAND.command):
                 return new DeleteTwitterFilterDiscordMessageHandler(this.message, this.twitterClient, DELETE_TWITTER_FILTER_COMMAND);
+            case(CHANGE_PERMISSIONS_COMMAND.command):
+                return new ChangePermissionsDiscordMessageHandler(this.message, CHANGE_PERMISSIONS_COMMAND);
             case(HELP_COMMAND.command):
                 return new HelpCommandDiscordMessageHandler(this.message, HELP_COMMAND);
         }
