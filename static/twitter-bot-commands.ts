@@ -26,7 +26,7 @@ export const LIST_USERS_COMMAND: TwitterBotCommand = {
 export const ADD_TWITTER_FILTER_COMMAND: TwitterBotCommand = {
     commandName: 'Add Twitter Filter',
     command: '!add-filter',
-    privilegeLevel: 'public',
+    privilegeLevel: 'admin',
     sampleCall: '!add-filter from:7seven7seven777',
     description: 'The search term can be whatever you would type in a twitter search bar.  That means you could run the command "!add-filter ps5 release (walmart OR target OR gamestop)".',
     references: [
@@ -37,7 +37,7 @@ export const ADD_TWITTER_FILTER_COMMAND: TwitterBotCommand = {
 export const DELETE_TWITTER_FILTER_COMMAND: TwitterBotCommand = {
     commandName: 'Delete Twitter Filter',
     command: '!delete-filter',
-    privilegeLevel: 'public',
+    privilegeLevel: 'admin',
     sampleCall: '!delete-filter 12345678910'
 }
 

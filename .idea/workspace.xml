@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="667b4fc8-a933-45a2-ad7f-88bec28107a4" name="Default Changelist" comment="* Add a command to list the users so we can see their permissions">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="667b4fc8-a933-45a2-ad7f-88bec28107a4" name="Default Changelist" comment="* Update the code such that the twitter API returns more info and format the discord messages using MessageEmbed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DiscordTweetReceivedHandler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/DiscordTweetReceivedHandler.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TwitterClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterClient.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/twitter-bot-commands.ts" beforeDir="false" afterPath="$PROJECT_DIR$/static/twitter-bot-commands.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,7 +108,7 @@
       <workItem from="1607995451392" duration="756000" />
       <workItem from="1607998482620" duration="14384000" />
       <workItem from="1608061135161" duration="11998000" />
-      <workItem from="1608585735416" duration="5090000" />
+      <workItem from="1608585735416" duration="6124000" />
     </task>
     <task id="LOCAL-00001" summary="* Initial commit after forking off of spotify bot.">
       <created>1607481859413</created>
@@ -300,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608181905350</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="* Update the code such that the twitter API returns more info and format the discord messages using MessageEmbed">
+      <created>1608590897423</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1608590897423</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,7 +325,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="* Clean out the files from anything related to SpotifyBot and set it up for TwitterBot" />
     <MESSAGE value="* We do not need aws-sdk" />
     <MESSAGE value="* Add a file with a no op function that conforms to the interface. We can make it do something later" />
     <MESSAGE value="* I am the author now." />
@@ -344,6 +349,7 @@
     <MESSAGE value="* Switch twitter bot over to the main channel" />
     <MESSAGE value="* Add a command that requires privileged permissions" />
     <MESSAGE value="* Add a command to list the users so we can see their permissions" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Add a command to list the users so we can see their permissions" />
+    <MESSAGE value="* Update the code such that the twitter API returns more info and format the discord messages using MessageEmbed" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Update the code such that the twitter API returns more info and format the discord messages using MessageEmbed" />
   </component>
 </project>
