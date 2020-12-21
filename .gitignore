@@ -4,3 +4,4 @@ node_modules/
 .env
 auth.ts
 prod.ts
+ssh-into-ec2.sh

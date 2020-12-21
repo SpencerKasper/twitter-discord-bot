@@ -14,7 +14,21 @@ const HEADERS_WITH_JSON = {
     "content-type": "application/json"
 };
 
-export type TweetResponse = { data: { id: string; text: string; } };
+type MatchingTwitterRule = { id: number, tag: string | null };
+type TwitterUser = { id: string; name: string; username: string; };
+type TweetEntities = { urls?: string[]; mentions?: string[]; annotations: string[]; };
+export type TweetResponse = {
+    data: {
+        author_id?: string;
+        id: string;
+        text: string;
+    },
+    entities?: TweetEntities,
+    includes?: {
+        users: TwitterUser[]
+    },
+    matching_rules?: MatchingTwitterRule[]
+};
 
 export interface TweetReceivedHandler {
     handle(tweet: TweetResponse): void;
@@ -44,10 +58,8 @@ export class TwitterClient {
                 }, 2 ** timeout);
                 await this.startStream();
             })
-            await this.deleteAllRules();
         } catch (e) {
             console.error(e);
-            process.exit(-1);
         }
     }
 
@@ -70,7 +82,9 @@ export class TwitterClient {
             timeout: 20000
         }
 
-        const stream = await needle.get(STREAM_URL, {
+        const queryParams = `expansions=author_id&tweet.fields=entities`;
+        const fullUrl = `${STREAM_URL}?${queryParams}`;
+        const stream = await needle.get(fullUrl, {
             headers: HEADER
         }, options);
 
