@@ -23,7 +23,7 @@ export class HelpCommandDiscordMessageHandler implements DiscordMessageHandler {
             .setColor('#1DA1F2');
         COMMANDS.forEach(commandObj => {
             const {command, commandName, privilegeLevel, sampleCall, description, references} = commandObj;
-            let helpMessage = `${commandName}\nIdentifier: ${command}\nRequired Privilege Level: ${privilegeLevel}`;
+            let helpMessage = `Identifier: ${command}\nRequired Privilege Level: ${privilegeLevel}`;
             if (sampleCall) {
                 helpMessage = `${helpMessage}\nSample Call: ${sampleCall}`;
             }

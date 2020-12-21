@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="667b4fc8-a933-45a2-ad7f-88bec28107a4" name="Default Changelist" comment="* Just send the link and use the built in twitter embed">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="667b4fc8-a933-45a2-ad7f-88bec28107a4" name="Default Changelist" comment="* Update the help message to be prettier">
       <change beforePath="$PROJECT_DIR$/discordMessageHandlers/HelpCommandDiscordMessageHandler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/discordMessageHandlers/HelpCommandDiscordMessageHandler.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +106,7 @@
       <workItem from="1607995451392" duration="756000" />
       <workItem from="1607998482620" duration="14384000" />
       <workItem from="1608061135161" duration="11998000" />
-      <workItem from="1608585735416" duration="7236000" />
+      <workItem from="1608585735416" duration="7671000" />
     </task>
     <task id="LOCAL-00001" summary="* Initial commit after forking off of spotify bot.">
       <created>1607481859413</created>
@@ -312,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608592531986</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="* Update the help message to be prettier">
+      <created>1608593722311</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1608593722311</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -331,7 +337,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="* Add a file with a no op function that conforms to the interface. We can make it do something later" />
     <MESSAGE value="* I am the author now." />
     <MESSAGE value="* Oops this doesn't exist anymore for now" />
     <MESSAGE value="* This is a working sample for sending whenever Kinley or I retweet something." />
@@ -356,6 +361,7 @@
     <MESSAGE value="* Add a command to list the users so we can see their permissions" />
     <MESSAGE value="* Update the code such that the twitter API returns more info and format the discord messages using MessageEmbed" />
     <MESSAGE value="* Just send the link and use the built in twitter embed" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Just send the link and use the built in twitter embed" />
+    <MESSAGE value="* Update the help message to be prettier" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Update the help message to be prettier" />
   </component>
 </project>
