@@ -1,8 +1,8 @@
 import {auth} from "./auth";
 import Discord, {Message} from 'discord.js';
 import {TwitterBotMessageHandlerDispatcher} from "./discordMessageHandlers/TwitterBotMessageHandlerDispatcher";
-import {TwitterClient} from "./TwitterClient";
-import {DiscordTweetReceivedHandler} from "./DiscordTweetReceivedHandler";
+import {TwitterClient} from "./twitter/TwitterClient";
+import {DiscordTweetReceivedHandler} from "./twitter/DiscordTweetReceivedHandler";
 
 const TWITTER_CHANNEL_ID = '785956126055333938';
 
