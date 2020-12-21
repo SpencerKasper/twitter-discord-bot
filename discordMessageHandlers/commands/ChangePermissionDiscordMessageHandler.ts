@@ -1,8 +1,8 @@
-import {DiscordMessageHandler} from "./DiscordMessageHandler";
+import {DiscordMessageHandler} from "../DiscordMessageHandler";
 import {Message} from "discord.js";
-import {TwitterBotCommand} from "../static/twitter-bot-commands";
-import {PhraseAfterIdentifierMessageParser} from "../messageParsers/PhraseAfterIdentifierMessageParser";
-import {FileReaderAndWriter} from "../utils/FileReaderAndWriter";
+import {TwitterBotCommand} from "../../static/twitter-bot-commands";
+import {PhraseAfterIdentifierMessageParser} from "../../messageParsers/PhraseAfterIdentifierMessageParser";
+import {FileReaderAndWriter} from "../../utils/FileReaderAndWriter";
 
 const PRIVILEGE_LEVELS = [
     'public',

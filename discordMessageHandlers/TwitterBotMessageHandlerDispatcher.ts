@@ -1,6 +1,6 @@
 import {Message} from "discord.js";
 import {COMMANDS} from "../static/twitter-bot-commands";
-import {ListDiscordMessageHandler} from "./ListDiscordMessageHandler";
+import {ListDiscordMessageHandler} from "./commands/ListDiscordMessageHandler";
 import {TwitterClient} from "../TwitterClient";
 import {DiscordMessageParser} from "../messageParsers/DiscordMessageParser";
 import {PhraseAfterIdentifierMessageParser} from "../messageParsers/PhraseAfterIdentifierMessageParser";

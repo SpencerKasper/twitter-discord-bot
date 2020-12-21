@@ -10,12 +10,12 @@ import {
     LIST_FILTERS_COMMAND,
     LIST_USERS_COMMAND
 } from "../static/twitter-bot-commands";
-import {ListDiscordMessageHandler} from "./ListDiscordMessageHandler";
-import {AddTwitterFilterDiscordMessageHandler} from "./AddTwitterFilterDiscordMessageHandler";
-import {DeleteTwitterFilterDiscordMessageHandler} from "./DeleteTwitterFilterDiscordMessageHandler";
-import {HelpCommandDiscordMessageHandler} from "./HelpCommandDiscordMessageHandler";
-import {ChangePermissionsDiscordMessageHandler} from "./ChangePermissionDiscordMessageHandler";
-import {ListUsersDiscordMessageHandler} from "./ListUsersDiscordMessageHandler";
+import {ListDiscordMessageHandler} from "./commands/ListDiscordMessageHandler";
+import {AddTwitterFilterDiscordMessageHandler} from "./commands/AddTwitterFilterDiscordMessageHandler";
+import {DeleteTwitterFilterDiscordMessageHandler} from "./commands/DeleteTwitterFilterDiscordMessageHandler";
+import {HelpCommandDiscordMessageHandler} from "./commands/HelpCommandDiscordMessageHandler";
+import {ChangePermissionsDiscordMessageHandler} from "./commands/ChangePermissionDiscordMessageHandler";
+import {ListUsersDiscordMessageHandler} from "./commands/ListUsersDiscordMessageHandler";
 
 export class DiscordMessageHandlerFactory {
     private readonly message: Message;

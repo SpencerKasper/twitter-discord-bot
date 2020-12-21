@@ -1,8 +1,8 @@
-import {DiscordMessageHandler} from "./DiscordMessageHandler";
+import {DiscordMessageHandler} from "../DiscordMessageHandler";
 import {Message} from "discord.js";
-import {TwitterClient} from "../TwitterClient";
-import {TwitterBotCommand} from "../static/twitter-bot-commands";
-import {PhraseAfterIdentifierMessageParser} from "../messageParsers/PhraseAfterIdentifierMessageParser";
+import {TwitterClient} from "../../TwitterClient";
+import {TwitterBotCommand} from "../../static/twitter-bot-commands";
+import {PhraseAfterIdentifierMessageParser} from "../../messageParsers/PhraseAfterIdentifierMessageParser";
 
 export class DeleteTwitterFilterDiscordMessageHandler implements DiscordMessageHandler {
     message: Message;

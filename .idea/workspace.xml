@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="667b4fc8-a933-45a2-ad7f-88bec28107a4" name="Default Changelist" comment="* Update the help message to be prettier">
-      <change beforePath="$PROJECT_DIR$/discordMessageHandlers/HelpCommandDiscordMessageHandler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/discordMessageHandlers/HelpCommandDiscordMessageHandler.ts" afterDir="false" />
+    <list default="true" id="667b4fc8-a933-45a2-ad7f-88bec28107a4" name="Default Changelist" comment="* Remove command name from help message">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discordMessageHandlers/AddTwitterFilterDiscordMessageHandler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/discordMessageHandlers/commands/AddTwitterFilterDiscordMessageHandler.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discordMessageHandlers/ChangePermissionDiscordMessageHandler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/discordMessageHandlers/commands/ChangePermissionDiscordMessageHandler.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discordMessageHandlers/DeleteTwitterFilterDiscordMessageHandler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/discordMessageHandlers/commands/DeleteTwitterFilterDiscordMessageHandler.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discordMessageHandlers/DiscordMessageHandlerFactory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/discordMessageHandlers/DiscordMessageHandlerFactory.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discordMessageHandlers/HelpCommandDiscordMessageHandler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/discordMessageHandlers/commands/HelpCommandDiscordMessageHandler.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discordMessageHandlers/ListDiscordMessageHandler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/discordMessageHandlers/commands/ListDiscordMessageHandler.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discordMessageHandlers/ListUsersDiscordMessageHandler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/discordMessageHandlers/commands/ListUsersDiscordMessageHandler.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discordMessageHandlers/TwitterBotMessageHandlerDispatcher.ts" beforeDir="false" afterPath="$PROJECT_DIR$/discordMessageHandlers/TwitterBotMessageHandlerDispatcher.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +70,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/discordMessageHandlers/commands" />
       <recent name="$PROJECT_DIR$/discordMessageHandlers" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -106,7 +115,7 @@
       <workItem from="1607995451392" duration="756000" />
       <workItem from="1607998482620" duration="14384000" />
       <workItem from="1608061135161" duration="11998000" />
-      <workItem from="1608585735416" duration="7671000" />
+      <workItem from="1608585735416" duration="8325000" />
     </task>
     <task id="LOCAL-00001" summary="* Initial commit after forking off of spotify bot.">
       <created>1607481859413</created>
@@ -318,7 +327,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608593722311</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="* Remove command name from help message">
+      <created>1608594060482</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1608594060482</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,7 +353,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="* I am the author now." />
     <MESSAGE value="* Oops this doesn't exist anymore for now" />
     <MESSAGE value="* This is a working sample for sending whenever Kinley or I retweet something." />
     <MESSAGE value="* Refactor the code into a class and pull apart some of the functions" />
@@ -362,6 +377,7 @@
     <MESSAGE value="* Update the code such that the twitter API returns more info and format the discord messages using MessageEmbed" />
     <MESSAGE value="* Just send the link and use the built in twitter embed" />
     <MESSAGE value="* Update the help message to be prettier" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Update the help message to be prettier" />
+    <MESSAGE value="* Remove command name from help message" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Remove command name from help message" />
   </component>
 </project>
