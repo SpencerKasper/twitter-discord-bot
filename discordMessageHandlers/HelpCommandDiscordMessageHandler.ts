@@ -1,5 +1,5 @@
 import {DiscordMessageHandler} from "./DiscordMessageHandler";
-import {Message} from "discord.js";
+import {Message, MessageEmbed} from "discord.js";
 import {COMMANDS, TwitterBotCommand} from "../static/twitter-bot-commands";
 
 export class HelpCommandDiscordMessageHandler implements DiscordMessageHandler {
@@ -16,24 +16,26 @@ export class HelpCommandDiscordMessageHandler implements DiscordMessageHandler {
         await this.message.channel.send(helpMessage);
     }
 
-    private static getHelpMessage(): string {
-        return COMMANDS.map(commandObj => {
+    private static getHelpMessage(): MessageEmbed {
+        const message = new MessageEmbed()
+            .setTitle('Commands List')
+            .setDescription('Some commands require different privilege levels.  Admins can escalate privilege levels for users.')
+            .setColor('#1DA1F2');
+        COMMANDS.forEach(commandObj => {
             const {command, commandName, privilegeLevel, sampleCall, description, references} = commandObj;
             let helpMessage = `${commandName}\nIdentifier: ${command}\nRequired Privilege Level: ${privilegeLevel}`;
-
             if (sampleCall) {
                 helpMessage = `${helpMessage}\nSample Call: ${sampleCall}`;
             }
-
             if (description) {
                 helpMessage = `${helpMessage}\nDescription: ${description}`;
             }
-
             if (references) {
                 helpMessage = `${helpMessage}\nSee here for more information:\n${references.join('\n')}`;
             }
+            message.addField(commandName, helpMessage);
+        });
 
-            return helpMessage;
-        }).join('\n\n');
+        return message;
     }
 }
