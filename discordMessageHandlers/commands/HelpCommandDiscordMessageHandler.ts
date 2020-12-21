@@ -1,6 +1,6 @@
 import {DiscordMessageHandler} from "../DiscordMessageHandler";
 import {Message, MessageEmbed} from "discord.js";
-import {COMMANDS, TwitterBotCommand} from "../../static/twitter-bot-commands";
+import {COMMANDS, TwitterBotCommand} from "../../twitter-bot-commands";
 
 export class HelpCommandDiscordMessageHandler implements DiscordMessageHandler {
     message: Message;

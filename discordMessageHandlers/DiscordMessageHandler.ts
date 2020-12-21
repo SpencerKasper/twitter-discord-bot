@@ -1,5 +1,5 @@
 import {Message} from "discord.js";
-import {TwitterBotCommand} from "../static/twitter-bot-commands";
+import {TwitterBotCommand} from "../twitter-bot-commands";
 
 export interface DiscordMessageHandler {
     message: Message;

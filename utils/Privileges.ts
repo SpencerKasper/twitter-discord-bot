@@ -1,6 +1,6 @@
 import {FileReaderAndWriter} from "./FileReaderAndWriter";
 import {DiscordUser} from "./DiscordUser";
-import {TwitterBotCommand} from "../static/twitter-bot-commands";
+import {TwitterBotCommand} from "../twitter-bot-commands";
 
 export type PrivilegeLevels = 'public' | 'admin';
 

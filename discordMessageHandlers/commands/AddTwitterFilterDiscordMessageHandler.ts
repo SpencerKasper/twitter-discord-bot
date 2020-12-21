@@ -2,7 +2,7 @@ import {DiscordMessageHandler} from "../DiscordMessageHandler";
 import {Message} from "discord.js";
 import {TwitterClient} from "../../twitter/TwitterClient";
 import {PhraseAfterIdentifierMessageParser} from "../../messageParsers/PhraseAfterIdentifierMessageParser";
-import {TwitterBotCommand} from "../../static/twitter-bot-commands";
+import {TwitterBotCommand} from "../../twitter-bot-commands";
 
 export class AddTwitterFilterDiscordMessageHandler implements DiscordMessageHandler {
     message: Message;

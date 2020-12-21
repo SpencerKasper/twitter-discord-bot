@@ -1,4 +1,4 @@
-import {PrivilegeLevels} from "../utils/Privileges";
+import {PrivilegeLevels} from "./utils/Privileges";
 
 export interface TwitterBotCommand {
     commandName: string;

@@ -9,7 +9,7 @@ import {
     HELP_COMMAND,
     LIST_FILTERS_COMMAND,
     LIST_USERS_COMMAND
-} from "../static/twitter-bot-commands";
+} from "../twitter-bot-commands";
 import {ListDiscordMessageHandler} from "./commands/ListDiscordMessageHandler";
 import {AddTwitterFilterDiscordMessageHandler} from "./commands/AddTwitterFilterDiscordMessageHandler";
 import {DeleteTwitterFilterDiscordMessageHandler} from "./commands/DeleteTwitterFilterDiscordMessageHandler";
