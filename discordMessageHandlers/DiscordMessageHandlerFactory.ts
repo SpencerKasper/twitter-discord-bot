@@ -8,7 +8,8 @@ import {
     DELETE_TWITTER_FILTER_COMMAND,
     HELP_COMMAND,
     LIST_FILTERS_COMMAND,
-    LIST_USERS_COMMAND
+    LIST_USERS_COMMAND,
+    REGISTER_TWITTER_ACCOUNT_COMMAND
 } from "../twitter-bot-commands";
 import {ListDiscordMessageHandler} from "./commands/ListDiscordMessageHandler";
 import {AddTwitterFilterDiscordMessageHandler} from "./commands/AddTwitterFilterDiscordMessageHandler";
@@ -16,6 +17,7 @@ import {DeleteTwitterFilterDiscordMessageHandler} from "./commands/DeleteTwitter
 import {HelpCommandDiscordMessageHandler} from "./commands/HelpCommandDiscordMessageHandler";
 import {ChangePermissionsDiscordMessageHandler} from "./commands/ChangePermissionDiscordMessageHandler";
 import {ListUsersDiscordMessageHandler} from "./commands/ListUsersDiscordMessageHandler";
+import {RegisterTwitterAccountDiscordMessageHandler} from "./commands/RegisterTwitterAccountDiscordMessageHandler";
 
 export class DiscordMessageHandlerFactory {
     private readonly message: Message;
@@ -42,6 +44,8 @@ export class DiscordMessageHandlerFactory {
                 return new HelpCommandDiscordMessageHandler(this.message, HELP_COMMAND);
             case(LIST_USERS_COMMAND.command):
                 return new ListUsersDiscordMessageHandler(this.message, LIST_USERS_COMMAND);
+            case(REGISTER_TWITTER_ACCOUNT_COMMAND.command):
+                return new RegisterTwitterAccountDiscordMessageHandler(this.message, REGISTER_TWITTER_ACCOUNT_COMMAND, this.twitterClient);
         }
     }
 }

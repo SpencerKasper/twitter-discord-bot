@@ -1,16 +1,1 @@
-{
-  "users": [
-    {
-      "userName": "poshprincess7",
-      "privilegeLevel": "admin"
-    },
-    {
-      "userName": "liquidluck",
-      "privilegeLevel": "public"
-    },
-    {
-      "userName": "mcnuggetman",
-      "privilegeLevel": "public"
-    }
-  ]
-}
+{"users":[{"userName":"poshprincess7","privilegeLevel":"admin","twitterUserName":"7seven7seven777"},{"userName":"liquidluck","privilegeLevel":"public"},{"userName":"mcnuggetman","privilegeLevel":"public"}]}

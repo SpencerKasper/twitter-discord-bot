@@ -23,12 +23,12 @@ export class Privileges {
         const userPermissions = FileReaderAndWriter.readFile(`/../user-permissions.json`);
 
         if (userPermissions) {
-            const foundUser = userPermissions.users.filter(user => user.userName === discordUser.getUserName())[0];
+            const foundUser = userPermissions.users.filter(user => user.userName === discordUser.getUserNameOfMessageSender())[0];
             if (foundUser) {
                 return foundUser;
             }
 
-            const newUser = {userName: discordUser.getUserName(), privilegeLevel: 'public'};
+            const newUser = {userName: discordUser.getUserNameOfMessageSender(), privilegeLevel: 'public'};
             userPermissions.users.push(newUser);
             FileReaderAndWriter.writeFile(userPermissions, '/../user-permissions.json');
             return newUser;

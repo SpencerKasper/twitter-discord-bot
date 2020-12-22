@@ -49,6 +49,14 @@ export const CHANGE_PERMISSIONS_COMMAND: TwitterBotCommand = {
     description: 'Allows you to change the permissions for a user.  The first argument is the user and the second is the privilege level'
 }
 
+export const REGISTER_TWITTER_ACCOUNT_COMMAND: TwitterBotCommand = {
+    commandName: 'Register Twitter Account',
+    command: '!register',
+    privilegeLevel: 'public',
+    sampleCall: '!register 7seven7seven777',
+    description: 'Adds the user to the stream of tweets and retweets sent from the boss.'
+}
+
 export const HELP_COMMAND: TwitterBotCommand = {
     commandName: 'Help',
     command: '!help',
@@ -56,6 +64,7 @@ export const HELP_COMMAND: TwitterBotCommand = {
 }
 
 export const COMMANDS: TwitterBotCommand[] = [
+    REGISTER_TWITTER_ACCOUNT_COMMAND,
     LIST_FILTERS_COMMAND,
     LIST_USERS_COMMAND,
     ADD_TWITTER_FILTER_COMMAND,
