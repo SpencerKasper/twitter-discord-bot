@@ -4,7 +4,7 @@ import {TwitterBotMessageHandlerDispatcher} from "./discordMessageHandlers/Twitt
 import {TwitterClient} from "./twitter/TwitterClient";
 import {DiscordTweetReceivedHandler} from "./twitter/DiscordTweetReceivedHandler";
 
-const TWITTER_CHANNEL_ID = '785956126055333938';
+const TWITTER_CHANNEL_ID = '785957073326178356';
 
 const discordClient = new Discord.Client();
 let discordChannelForTwitterBot;

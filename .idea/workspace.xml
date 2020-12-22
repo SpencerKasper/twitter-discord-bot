@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="667b4fc8-a933-45a2-ad7f-88bec28107a4" name="Default Changelist" comment="* One more time moving stuff">
-      <change afterPath="$PROJECT_DIR$/discordMessageHandlers/commands/RegisterTwitterAccountDiscordMessageHandler.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discordMessageHandlers/DiscordMessageHandlerFactory.ts" beforeDir="false" afterPath="$PROJECT_DIR$/discordMessageHandlers/DiscordMessageHandlerFactory.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/discordMessageHandlers/commands/ChangePermissionDiscordMessageHandler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/discordMessageHandlers/commands/ChangePermissionDiscordMessageHandler.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/twitter-bot-commands.ts" beforeDir="false" afterPath="$PROJECT_DIR$/twitter-bot-commands.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-permissions.json" beforeDir="false" afterPath="$PROJECT_DIR$/user-permissions.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/DiscordUser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/DiscordUser.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/Privileges.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/Privileges.ts" afterDir="false" />
+    <list default="true" id="667b4fc8-a933-45a2-ad7f-88bec28107a4" name="Default Changelist" comment="* Add a command to register your twitter account.">
+      <change beforePath="$PROJECT_DIR$/twitter-bot.ts" beforeDir="false" afterPath="$PROJECT_DIR$/twitter-bot.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +108,7 @@
       <workItem from="1607995451392" duration="756000" />
       <workItem from="1607998482620" duration="14384000" />
       <workItem from="1608061135161" duration="11998000" />
-      <workItem from="1608585735416" duration="12540000" />
+      <workItem from="1608585735416" duration="12806000" />
     </task>
     <task id="LOCAL-00001" summary="* Initial commit after forking off of spotify bot.">
       <created>1607481859413</created>
@@ -355,7 +348,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608594966522</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="* Add a command to register your twitter account.">
+      <created>1608599010338</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1608599010338</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,7 +374,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="* Remove one unnecessary print statement." />
     <MESSAGE value="* Just doing a little bit more clean up" />
     <MESSAGE value="* Extract an optionally throw errors function" />
     <MESSAGE value="* Oops you definitely can't use in in the way that I attempted to.  I think that just looks at the fields of an object, but I could be wrong." />
@@ -399,6 +398,7 @@
     <MESSAGE value="* Move some stuff around no big deal" />
     <MESSAGE value="* More moving stuff" />
     <MESSAGE value="* One more time moving stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="* One more time moving stuff" />
+    <MESSAGE value="* Add a command to register your twitter account." />
+    <option name="LAST_COMMIT_MESSAGE" value="* Add a command to register your twitter account." />
   </component>
 </project>
